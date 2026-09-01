@@ -1,545 +1,570 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>WAYED MARKETING</title>
-
-    <meta name="description"
-          content="WAYED MARKETING - Marketplace Management, Digital Marketing and Website Development">
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #ffffff;
-            color: #111111;
-            line-height: 1.6;
-        }
-
-        /* ================= HEADER ================= */
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            width: 100%;
-            background: rgba(255,255,255,0.96);
-            border-bottom: 1px solid #eeeeee;
-        }
-
-        .navbar {
-            max-width: 1150px;
-            margin: auto;
-            padding: 15px 25px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 21px;
-            font-weight: 800;
-            letter-spacing: 1px;
-        }
-
-        .logo img {
-            width: 45px;
-            height: 45px;
-            object-fit: contain;
-        }
-
-        nav a {
-            color: #111111;
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        nav a:hover {
-            color: #666666;
-        }
-
-
-        /* ================= HERO ================= */
-
-        .hero {
-            min-height: 88vh;
-            display: flex;
-            align-items: center;
-            background: #f7f7f7;
-        }
-
-        .hero-content {
-            width: 100%;
-            max-width: 1150px;
-            margin: auto;
-            padding: 80px 25px;
-        }
-
-        .hero-tag {
-            display: inline-block;
-            padding: 8px 15px;
-            border: 1px solid #dddddd;
-            border-radius: 30px;
-            background: #ffffff;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 25px;
-        }
-
-        .hero h1 {
-            max-width: 900px;
-            font-size: clamp(42px, 7vw, 78px);
-            line-height: 1.05;
-            letter-spacing: -3px;
-            margin-bottom: 25px;
-        }
-
-        .hero h1 span {
-            color: #666666;
-        }
-
-        .hero p {
-            max-width: 680px;
-            color: #555555;
-            font-size: 18px;
-            margin-bottom: 35px;
-        }
-
-        .buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 25px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 700;
-            transition: 0.2s;
-        }
-
-        .btn-primary {
-            background: #111111;
-            color: #ffffff;
-        }
-
-        .btn-primary:hover {
-            background: #333333;
-        }
-
-        .btn-secondary {
-            background: #ffffff;
-            color: #111111;
-            border: 1px solid #111111;
-        }
-
-        .btn-secondary:hover {
-            background: #111111;
-            color: #ffffff;
-        }
-
-
-        /* ================= COMMON ================= */
-
-        section {
-            padding: 90px 25px;
-        }
-
-        .container {
-            max-width: 1150px;
-            margin: auto;
-        }
-
-        .section-label {
-            color: #777777;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-        }
-
-        .section-title {
-            font-size: clamp(32px, 5vw, 52px);
-            line-height: 1.1;
-            letter-spacing: -1.5px;
-            margin-bottom: 20px;
-        }
-
-        .section-description {
-            max-width: 700px;
-            color: #666666;
-            font-size: 16px;
-        }
-
-
-        /* ================= ABOUT ================= */
-
-        .about {
-            background: #ffffff;
-        }
-
-        .about-grid {
-            margin-top: 55px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 70px;
-            align-items: center;
-        }
-
-        .about-text p {
-            color: #555555;
-            margin-bottom: 18px;
-        }
-
-        .about-highlight {
-            background: #f7f7f7;
-            border-left: 4px solid #111111;
-            padding: 30px;
-        }
-
-        .about-highlight h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .about-highlight p {
-            color: #666666;
-        }
-
-
-        /* ================= SERVICES ================= */
-
-        .services {
-            background: #f7f7f7;
-        }
-
-        .service-grid {
-            margin-top: 50px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .service-card {
-            background: #ffffff;
-            padding: 35px;
-            border: 1px solid #e7e7e7;
-            border-radius: 10px;
-            transition: 0.25s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.07);
-        }
-
-        .service-number {
-            color: #888888;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 25px;
-        }
-
-        .service-card h3 {
-            font-size: 24px;
-            margin-bottom: 12px;
-        }
-
-        .service-card p {
-            color: #666666;
-        }
-
-
-        /* ================= MARKETPLACE ================= */
-
-        .marketplace {
-            background: #111111;
-            color: #ffffff;
-        }
-
-        .marketplace .section-label {
-            color: #aaaaaa;
-        }
-
-        .marketplace .section-description {
-            color: #bbbbbb;
-        }
-
-        .marketplace-grid {
-            margin-top: 50px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .market-card {
-            padding: 30px;
-            border: 1px solid #333333;
-            border-radius: 10px;
-        }
-
-        .market-card h3 {
-            font-size: 21px;
-            margin-bottom: 10px;
-        }
-
-        .market-card p {
-            color: #bbbbbb;
-            font-size: 14px;
-        }
-
-
-        /* ================= PROCESS ================= */
-
-        .process-grid {
-            margin-top: 50px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .process-card {
-            padding: 25px;
-            border-top: 2px solid #111111;
-        }
-
-        .process-card span {
-            color: #888888;
-            font-size: 13px;
-        }
-
-        .process-card h3 {
-            margin: 15px 0 8px;
-        }
-
-        .process-card p {
-            color: #666666;
-            font-size: 14px;
-        }
-
-
-        /* ================= CTA ================= */
-
-        .cta {
-            background: #f7f7f7;
-            text-align: center;
-        }
-
-        .cta .section-description {
-            margin: 0 auto 30px;
-        }
-
-
-        /* ================= CONTACT ================= */
-
-        .contact {
-            background: #ffffff;
-        }
-
-        .contact-grid {
-            margin-top: 50px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .contact-card {
-            padding: 30px;
-            background: #f7f7f7;
-            border-radius: 10px;
-        }
-
-        .contact-card small {
-            display: block;
-            color: #888888;
-            margin-bottom: 8px;
-            font-size: 13px;
-        }
-
-        .contact-card a {
-            color: #111111;
-            text-decoration: none;
-            font-weight: 700;
-        }
-
-        .contact-card a:hover {
-            text-decoration: underline;
-        }
-
-
-        /* ================= SOCIAL ICONS ================= */
-
-        .social-card {
-            grid-column: span 2;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-
-        .social-links a {
-            display: flex;
-            align-items: center;
-            gap: 9px;
-            padding: 10px 16px;
-            border: 1px solid #dddddd;
-            border-radius: 7px;
-            background: #ffffff;
-            color: #111111;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 700;
-            transition: 0.2s;
-        }
-
-        .social-links a:hover {
-            background: #111111;
-            color: #ffffff;
-        }
-
-        .social-icon {
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid #cccccc;
-            border-radius: 50%;
-            font-size: 11px;
-            font-weight: 800;
-        }
-
-
-        /* ================= FOOTER ================= */
-
-        footer {
-            background: #111111;
-            color: #ffffff;
-            padding: 35px 25px;
-        }
-
-        .footer-content {
-            max-width: 1150px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
-
-        footer p {
-            color: #aaaaaa;
-            font-size: 13px;
-        }
-
-
-        /* ================= MOBILE ================= */
-
-        @media (max-width: 800px) {
-
-            nav {
-                display: none;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .service-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .marketplace-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .process-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .social-card {
-                grid-column: span 1;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-
-
-        @media (max-width: 500px) {
-
-            section {
-                padding: 65px 20px;
-            }
-
-            .hero-content {
-                padding: 60px 20px;
-            }
-
-            .hero h1 {
-                letter-spacing: -2px;
-            }
-
-            .process-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .service-card {
-                padding: 25px;
-            }
-
-            .navbar {
-                padding: 12px 18px;
-            }
-
-            .logo {
-                font-size: 17px;
-            }
-
-            .logo img {
-                width: 38px;
-                height: 38px;
-            }
-
-            .social-links {
-                flex-direction: column;
-            }
-
-            .social-links a {
-                width: 100%;
-            }
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WAYED MARKETING</title>
+
+<meta name="description"
+content="WAYED MARKETING - Marketplace Management, Digital Marketing and Website Development">
+
+<style>
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #111111;
+    line-height: 1.6;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.96);
+    border-bottom: 1px solid #eeeeee;
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+nav a {
+    color: #111111;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #666666;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    background: #f7f7f7;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1150px;
+    margin: auto;
+    padding: 80px 25px;
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #dddddd;
+    border-radius: 30px;
+    background: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    max-width: 900px;
+    font-size: clamp(42px, 7vw, 78px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #666666;
+}
+
+.hero p {
+    max-width: 680px;
+    color: #555555;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background: #111111;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #333333;
+}
+
+.btn-secondary {
+    background: #ffffff;
+    color: #111111;
+    border: 1px solid #111111;
+}
+
+.btn-secondary:hover {
+    background: #111111;
+    color: #ffffff;
+}
+
+
+/* ================= COMMON ================= */
+
+section {
+    padding: 90px 25px;
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.section-label {
+    color: #777777;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    max-width: 700px;
+    color: #666666;
+    font-size: 16px;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    background: #ffffff;
+}
+
+.about-grid {
+    margin-top: 55px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-text p {
+    color: #555555;
+    margin-bottom: 18px;
+}
+
+.about-highlight {
+    background: #f7f7f7;
+    border-left: 4px solid #111111;
+    padding: 30px;
+}
+
+.about-highlight h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-highlight p {
+    color: #666666;
+}
+
+
+/* ================= SERVICES ================= */
+
+.services {
+    background: #f7f7f7;
+}
+
+.service-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 35px;
+    border: 1px solid #e7e7e7;
+    border-radius: 10px;
+    transition: 0.25s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.07);
+}
+
+.service-number {
+    color: #888888;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #666666;
+}
+
+
+/* ================= MARKETPLACE ================= */
+
+.marketplace {
+    background: #111111;
+    color: #ffffff;
+}
+
+.marketplace .section-label {
+    color: #aaaaaa;
+}
+
+.marketplace .section-description {
+    color: #bbbbbb;
+}
+
+.marketplace-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.market-card {
+    padding: 30px;
+    border: 1px solid #333333;
+    border-radius: 10px;
+}
+
+.market-card h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.market-card p {
+    color: #bbbbbb;
+    font-size: 14px;
+}
+
+
+/* ================= PROCESS ================= */
+
+.process-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.process-card {
+    padding: 25px;
+    border-top: 2px solid #111111;
+}
+
+.process-card span {
+    color: #888888;
+    font-size: 13px;
+}
+
+.process-card h3 {
+    margin: 15px 0 8px;
+}
+
+.process-card p {
+    color: #666666;
+    font-size: 14px;
+}
+
+
+/* ================= CTA ================= */
+
+.cta {
+    background: #f7f7f7;
+    text-align: center;
+}
+
+.cta .section-description {
+    margin: 0 auto 30px;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+    background: #ffffff;
+}
+
+.contact-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contact-card {
+    padding: 30px;
+    background: #f7f7f7;
+    border-radius: 10px;
+}
+
+.contact-card small {
+    display: block;
+    color: #888888;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.contact-card a {
+    color: #111111;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================= SOCIAL MEDIA ================= */
+
+.social-card {
+    grid-column: span 2;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 17px;
+    border: 1px solid #dddddd;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #111111;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.social-links a:hover {
+    background: #111111;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+/* ICON CIRCLE */
+
+.social-icon {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #cccccc;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.social-icon svg {
+    width: 19px;
+    height: 19px;
+    fill: currentColor;
+}
+
+
+/* INSTAGRAM ICON */
+
+.instagram-icon svg {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+.instagram-icon svg circle:last-child {
+    fill: currentColor;
+    stroke: none;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #111111;
+    color: #ffffff;
+    padding: 35px 25px;
+}
+
+.footer-content {
+    max-width: 1150px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+footer p {
+    color: #aaaaaa;
+    font-size: 13px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+    nav {
+        display: none;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .marketplace-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-card {
+        grid-column: span 1;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    section {
+        padding: 65px 20px;
+    }
+
+    .hero-content {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 25px;
+    }
+
+    .navbar {
+        padding: 12px 18px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .logo img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .social-links {
+        flex-direction: column;
+    }
+
+    .social-links a {
+        width: 100%;
+    }
+}
+
+</style>
 </head>
 
 
@@ -550,30 +575,30 @@
 
 <header>
 
-    <div class="navbar">
+<div class="navbar">
 
-        <div class="logo">
+<div class="logo">
 
-            <img src="logo.png" alt="WAYED MARKETING Logo">
+<img src="logo.png" alt="WAYED MARKETING Logo">
 
-            <span>WAYED MARKETING</span>
+<span>WAYED MARKETING</span>
 
-        </div>
+</div>
 
 
-        <nav>
+<nav>
 
-            <a href="#about">About</a>
+<a href="#about">About</a>
 
-            <a href="#services">Services</a>
+<a href="#services">Services</a>
 
-            <a href="#process">Process</a>
+<a href="#process">Process</a>
 
-            <a href="#contact">Contact</a>
+<a href="#contact">Contact</a>
 
-        </nav>
+</nav>
 
-    </div>
+</div>
 
 </header>
 
@@ -583,58 +608,56 @@
 
 <section class="hero">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <div class="hero-tag">
-            DIGITAL MARKETING • MARKETPLACE • WEB
-        </div>
-
-
-        <h1>
-
-            Grow your business.
-
-            <span>
-                We handle the digital side.
-            </span>
-
-        </h1>
+<div class="hero-tag">
+DIGITAL MARKETING • MARKETPLACE • WEB
+</div>
 
 
-        <p>
+<h1>
 
-            WAYED MARKETING helps businesses build and manage
-            their online presence through marketplace listings,
-            campaign management, digital marketing and website solutions.
+Grow your business.
 
-        </p>
+<span>
+We handle the digital side.
+</span>
 
-
-        <div class="buttons">
-
-            <!-- GOOGLE FORM -->
-
-            <a
-                href="https://forms.gle/WwPgEpj5BAmgPo8y9"
-                target="_blank"
-                class="btn btn-primary">
-
-                Tell Us Your Requirement →
-
-            </a>
+</h1>
 
 
-            <a
-                href="#services"
-                class="btn btn-secondary">
+<p>
 
-                Explore Services
+WAYED MARKETING helps businesses build and manage
+their online presence through marketplace listings,
+campaign management, digital marketing and website solutions.
 
-            </a>
+</p>
 
-        </div>
 
-    </div>
+<div class="buttons">
+
+<a
+href="https://forms.gle/WwPgEpj5BAmgPo8y9"
+target="_blank"
+class="btn btn-primary">
+
+Tell Us Your Requirement →
+
+</a>
+
+
+<a
+href="#services"
+class="btn btn-secondary">
+
+Explore Services
+
+</a>
+
+</div>
+
+</div>
 
 </section>
 
@@ -644,73 +667,73 @@
 
 <section class="about" id="about">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-label">
-            About Us
-        </div>
-
-
-        <h2 class="section-title">
-            Digital support for growing businesses.
-        </h2>
+<div class="section-label">
+About Us
+</div>
 
 
-        <p class="section-description">
-
-            We help businesses manage their digital presence
-            with practical and professional solutions.
-
-        </p>
+<h2 class="section-title">
+Digital support for growing businesses.
+</h2>
 
 
-        <div class="about-grid">
+<p class="section-description">
 
-            <div class="about-text">
+We help businesses manage their digital presence
+with practical and professional solutions.
 
-                <p>
-
-                    WAYED MARKETING works across marketplace
-                    management, digital marketing and website development.
-
-                </p>
+</p>
 
 
-                <p>
+<div class="about-grid">
 
-                    From creating and optimizing product listings
-                    to supporting online campaigns and building
-                    simple business websites, we help businesses
-                    strengthen their digital presence.
+<div class="about-text">
 
-                </p>
+<p>
 
+WAYED MARKETING works across marketplace
+management, digital marketing and website development.
 
-                <p>
-
-                    We focus on understanding each client's requirement
-                    and providing a practical solution for their business.
-
-                </p>
-
-            </div>
+</p>
 
 
-            <div class="about-highlight">
+<p>
 
-                <h3>
-                    One place for your digital requirements.
-                </h3>
+From creating and optimizing product listings
+to supporting online campaigns and building
+simple business websites, we help businesses
+strengthen their digital presence.
 
-                <p>
-                    Marketplace • Marketing • Website Development
-                </p>
+</p>
 
-            </div>
 
-        </div>
+<p>
 
-    </div>
+We focus on understanding each client's requirement
+and providing a practical solution for their business.
+
+</p>
+
+</div>
+
+
+<div class="about-highlight">
+
+<h3>
+One place for your digital requirements.
+</h3>
+
+<p>
+Marketplace • Marketing • Website Development
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -720,117 +743,117 @@
 
 <section class="services" id="services">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-label">
-            What We Do
-        </div>
-
-
-        <h2 class="section-title">
-            Our Services
-        </h2>
+<div class="section-label">
+What We Do
+</div>
 
 
-        <p class="section-description">
-
-            Simple and practical digital services for businesses
-            looking to improve their online presence.
-
-        </p>
+<h2 class="section-title">
+Our Services
+</h2>
 
 
-        <div class="service-grid">
+<p class="section-description">
+
+Simple and practical digital services for businesses
+looking to improve their online presence.
+
+</p>
 
 
-            <div class="service-card">
-
-                <div class="service-number">
-                    01 / MARKETPLACE
-                </div>
-
-                <h3>
-                    Product Listing
-                </h3>
-
-                <p>
-
-                    Product listing support for marketplaces
-                    including Amazon, Flipkart and other
-                    online selling platforms.
-
-                </p>
-
-            </div>
+<div class="service-grid">
 
 
+<div class="service-card">
 
-            <div class="service-card">
+<div class="service-number">
+01 / MARKETPLACE
+</div>
 
-                <div class="service-number">
-                    02 / CAMPAIGNS
-                </div>
+<h3>
+Product Listing
+</h3>
 
-                <h3>
-                    Campaign Management
-                </h3>
+<p>
 
-                <p>
+Product listing support for marketplaces
+including Amazon, Flipkart and other
+online selling platforms.
 
-                    Support for marketplace campaigns,
-                    promotions and digital activities designed
-                    to improve product visibility.
+</p>
 
-                </p>
-
-            </div>
+</div>
 
 
 
-            <div class="service-card">
+<div class="service-card">
 
-                <div class="service-number">
-                    03 / DIGITAL
-                </div>
+<div class="service-number">
+02 / CAMPAIGNS
+</div>
 
-                <h3>
-                    Digital Marketing
-                </h3>
+<h3>
+Campaign Management
+</h3>
 
-                <p>
+<p>
 
-                    Digital marketing support to help businesses
-                    establish and strengthen their online presence.
+Support for marketplace campaigns,
+promotions and digital activities designed
+to improve product visibility.
 
-                </p>
+</p>
 
-            </div>
-
-
-
-            <div class="service-card">
-
-                <div class="service-number">
-                    04 / WEB
-                </div>
-
-                <h3>
-                    Website Development
-                </h3>
-
-                <p>
-
-                    Simple, modern and responsive websites
-                    for businesses, brands and professional requirements.
-
-                </p>
-
-            </div>
+</div>
 
 
-        </div>
 
-    </div>
+<div class="service-card">
+
+<div class="service-number">
+03 / DIGITAL
+</div>
+
+<h3>
+Digital Marketing
+</h3>
+
+<p>
+
+Digital marketing support to help businesses
+establish and strengthen their online presence.
+
+</p>
+
+</div>
+
+
+
+<div class="service-card">
+
+<div class="service-number">
+04 / WEB
+</div>
+
+<h3>
+Website Development
+</h3>
+
+<p>
+
+Simple, modern and responsive websites
+for businesses, brands and professional requirements.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -840,85 +863,85 @@
 
 <section class="marketplace">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-label">
-            Marketplace Support
-        </div>
-
-
-        <h2 class="section-title">
-
-            Make your products ready
-            for online selling.
-
-        </h2>
+<div class="section-label">
+Marketplace Support
+</div>
 
 
-        <p class="section-description">
+<h2 class="section-title">
 
-            We support different parts of your marketplace
-            presence, from product information to promotional activities.
+Make your products ready
+for online selling.
 
-        </p>
-
-
-        <div class="marketplace-grid">
+</h2>
 
 
-            <div class="market-card">
+<p class="section-description">
 
-                <h3>
-                    Product Listings
-                </h3>
+We support different parts of your marketplace
+presence, from product information to promotional activities.
 
-                <p>
-
-                    Product titles, descriptions,
-                    specifications and listing content.
-
-                </p>
-
-            </div>
+</p>
 
 
+<div class="marketplace-grid">
 
-            <div class="market-card">
 
-                <h3>
-                    Campaigns
-                </h3>
+<div class="market-card">
 
-                <p>
+<h3>
+Product Listings
+</h3>
 
-                    Promotional campaigns and marketplace
-                    visibility activities.
+<p>
 
-                </p>
+Product titles, descriptions,
+specifications and listing content.
 
-            </div>
+</p>
+
+</div>
 
 
 
-            <div class="market-card">
+<div class="market-card">
 
-                <h3>
-                    Listing Optimization
-                </h3>
+<h3>
+Campaigns
+</h3>
 
-                <p>
+<p>
 
-                    Improve product presentation and make
-                    listings clearer for customers.
+Promotional campaigns and marketplace
+visibility activities.
 
-                </p>
+</p>
 
-            </div>
+</div>
 
 
-        </div>
 
-    </div>
+<div class="market-card">
+
+<h3>
+Listing Optimization
+</h3>
+
+<p>
+
+Improve product presentation and make
+listings clearer for customers.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -928,131 +951,131 @@
 
 <section id="process">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-label">
-            How We Work
-        </div>
-
-
-        <h2 class="section-title">
-
-            Simple process.
-            Clear communication.
-
-        </h2>
+<div class="section-label">
+How We Work
+</div>
 
 
-        <div class="process-grid">
+<h2 class="section-title">
+
+Simple process.
+Clear communication.
+
+</h2>
 
 
-            <div class="process-card">
-
-                <span>01</span>
-
-                <h3>
-                    Requirement
-                </h3>
-
-                <p>
-                    You tell us what your business needs.
-                </p>
-
-            </div>
+<div class="process-grid">
 
 
+<div class="process-card">
 
-            <div class="process-card">
+<span>01</span>
 
-                <span>02</span>
+<h3>
+Requirement
+</h3>
 
-                <h3>
-                    Discussion
-                </h3>
+<p>
+You tell us what your business needs.
+</p>
 
-                <p>
-                    We understand the requirement and
-                    discuss the right approach.
-                </p>
-
-            </div>
+</div>
 
 
 
-            <div class="process-card">
+<div class="process-card">
 
-                <span>03</span>
+<span>02</span>
 
-                <h3>
-                    Execution
-                </h3>
+<h3>
+Discussion
+</h3>
 
-                <p>
-                    We work on the agreed digital requirements.
-                </p>
+<p>
+We understand the requirement and
+discuss the right approach.
+</p>
 
-            </div>
-
-
-
-            <div class="process-card">
-
-                <span>04</span>
-
-                <h3>
-                    Delivery
-                </h3>
-
-                <p>
-                    The completed work is reviewed and delivered.
-                </p>
-
-            </div>
+</div>
 
 
-        </div>
 
-    </div>
+<div class="process-card">
+
+<span>03</span>
+
+<h3>
+Execution
+</h3>
+
+<p>
+We work on the agreed digital requirements.
+</p>
+
+</div>
+
+
+
+<div class="process-card">
+
+<span>04</span>
+
+<h3>
+Delivery
+</h3>
+
+<p>
+The completed work is reviewed and delivered.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
 
-<!-- ================= GOOGLE FORM CTA ================= -->
+<!-- ================= CTA ================= -->
 
 <section class="cta">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-label">
-            Start a Conversation
-        </div>
-
-
-        <h2 class="section-title">
-            Have a requirement?
-        </h2>
+<div class="section-label">
+Start a Conversation
+</div>
 
 
-        <p class="section-description">
-
-            Tell us about your business and what you need.
-            Submit your requirement through our form and
-            we'll get back to you.
-
-        </p>
+<h2 class="section-title">
+Have a requirement?
+</h2>
 
 
-        <a
-            href="https://forms.gle/WwPgEpj5BAmgPo8y9"
-            target="_blank"
-            class="btn btn-primary">
+<p class="section-description">
 
-            Submit Your Requirement →
+Tell us about your business and what you need.
+Submit your requirement through our form and
+we'll get back to you.
 
-        </a>
+</p>
 
-    </div>
+
+<a
+href="https://forms.gle/WwPgEpj5BAmgPo8y9"
+target="_blank"
+class="btn btn-primary">
+
+Submit Your Requirement →
+
+</a>
+
+</div>
 
 </section>
 
@@ -1062,175 +1085,197 @@
 
 <section class="contact" id="contact">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-label">
-            Contact
-        </div>
+<div class="section-label">
+Contact
+</div>
 
 
-        <h2 class="section-title">
-            Let's work together.
-        </h2>
+<h2 class="section-title">
+Let's work together.
+</h2>
 
 
-        <p class="section-description">
+<p class="section-description">
 
-            Reach out to discuss your marketplace,
-            marketing or website requirement.
+Reach out to discuss your marketplace,
+marketing or website requirement.
 
-        </p>
+</p>
 
 
-        <div class="contact-grid">
+<div class="contact-grid">
 
 
-            <!-- PHONE -->
+<!-- PHONE -->
 
-            <div class="contact-card">
+<div class="contact-card">
 
-                <small>
-                    Phone
-                </small>
+<small>
+Phone
+</small>
 
-                <a href="tel:+918220507328">
+<a href="tel:+918220507328">
 
-                    +91 82205 07328
++91 82205 07328
 
-                </a>
+</a>
 
-            </div>
+</div>
 
 
 
-            <!-- EMAIL -->
+<!-- EMAIL -->
 
-            <div class="contact-card">
+<div class="contact-card">
 
-                <small>
-                    Email
-                </small>
+<small>
+Email
+</small>
 
-                <a href="mailto:wayedmarketing@gmail.com">
+<a href="mailto:wayedmarketing@gmail.com">
 
-                    wayedmarketing@gmail.com
+wayedmarketing@gmail.com
 
-                </a>
+</a>
 
-            </div>
+</div>
 
 
 
-            <!-- GOOGLE FORM -->
+<!-- CLIENT REQUIREMENT -->
 
-            <div class="contact-card">
+<div class="contact-card">
 
-                <small>
-                    Client Requirement
-                </small>
+<small>
+Client Requirement
+</small>
 
-                <a
-                    href="https://forms.gle/WwPgEpj5BAmgPo8y9"
-                    target="_blank">
+<a
+href="https://forms.gle/WwPgEpj5BAmgPo8y9"
+target="_blank">
 
-                    Submit Requirement →
+Submit Requirement →
 
-                </a>
+</a>
 
-            </div>
+</div>
 
 
 
-            <!-- WHATSAPP -->
+<!-- WHATSAPP -->
 
-            <div class="contact-card">
+<div class="contact-card">
 
-                <small>
-                    WhatsApp
-                </small>
+<small>
+WhatsApp
+</small>
 
-                <a
-                    href="https://wa.me/918300808073"
-                    target="_blank">
+<a
+href="https://wa.me/918300808073"
+target="_blank">
 
-                    +91 83008 08073
++91 83008 08073
 
-                </a>
+</a>
 
-            </div>
+</div>
 
 
 
-            <!-- SOCIAL MEDIA -->
+<!-- SOCIAL MEDIA -->
 
-            <div class="contact-card social-card">
+<div class="contact-card social-card">
 
-                <small>
-                    Connect With Us
-                </small>
+<small>
+Connect With Us
+</small>
 
 
-                <div class="social-links">
+<div class="social-links">
 
 
-                    <!-- WHATSAPP -->
+<!-- WHATSAPP -->
 
-                    <a
-                        href="https://wa.me/918300808073"
-                        target="_blank"
-                        aria-label="WhatsApp">
+<a
+href="https://wa.me/918300808073"
+target="_blank"
+aria-label="WhatsApp">
 
-                        <span class="social-icon">
-                            WA
-                        </span>
+<span class="social-icon whatsapp-icon">
 
-                        WhatsApp
+<svg viewBox="0 0 24 24">
 
-                    </a>
+<path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L.2 24l6.5-1.7c1.8 1 3.5 1.4 5.4 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.2-3.5-8.4zm-8.4 18.2h-.1c-1.7 0-3.4-.5-4.8-1.3l-.3-.2-3.9 1 1-3.8-.2-.4a9.7 9.7 0 1 1 8.3 4.7zm5.3-7.3c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.8-3.2-.3-.5.3-.5.8-1.7.1-.2.1-.4 0-.6-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.8.6-.1 1.7-.7 2-1.3.3-.6.3-1.2.2-1.3-.1-.2-.3-.3-.6-.4z"/>
 
+</svg>
 
+</span>
 
-                    <!-- INSTAGRAM -->
+WhatsApp
 
-                    <a
-                        href="https://www.instagram.com/wayed_marketing"
-                        target="_blank"
-                        aria-label="Instagram">
+</a>
 
-                        <span class="social-icon">
-                            IG
-                        </span>
 
-                        Instagram
 
-                    </a>
+<!-- INSTAGRAM -->
 
+<a
+href="https://www.instagram.com/wayed_marketing"
+target="_blank"
+aria-label="Instagram">
 
+<span class="social-icon instagram-icon">
 
-                    <!-- LINKEDIN -->
+<svg viewBox="0 0 24 24">
 
-                    <a
-                        href="https://www.linkedin.com/company/wayed-marketing/"
-                        target="_blank"
-                        aria-label="LinkedIn">
+<rect x="3" y="3" width="18" height="18" rx="5"></rect>
 
-                        <span class="social-icon">
-                            in
-                        </span>
+<circle cx="12" cy="12" r="4"></circle>
 
-                        LinkedIn
+<circle cx="17.5" cy="6.5" r="1"></circle>
 
-                    </a>
+</svg>
 
+</span>
 
-                </div>
+Instagram
 
-            </div>
+</a>
 
 
-        </div>
 
-    </div>
+<!-- LINKEDIN -->
+
+<a
+href="https://www.linkedin.com/company/wayed-marketing/"
+target="_blank"
+aria-label="LinkedIn">
+
+<span class="social-icon linkedin-icon">
+
+<svg viewBox="0 0 24 24">
+
+<path d="M5 3.5A2.5 2.5 0 1 1 5 8.5 2.5 2.5 0 0 1 5 3.5zM3 9h4v12H3V9zm6 0h3.8v1.6h.1c.5-.9 1.7-2 3.7-2 4 0 4.7 2.6 4.7 6v6.4h-4v-5.7c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1V21H9V9z"/>
+
+</svg>
+
+</span>
+
+LinkedIn
+
+</a>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -1240,18 +1285,18 @@
 
 <footer>
 
-    <div class="footer-content">
+<div class="footer-content">
 
-        <strong>
-            WAYED MARKETING
-        </strong>
+<strong>
+WAYED MARKETING
+</strong>
 
 
-        <p>
-            © 2026 WAYED MARKETING. All rights reserved.
-        </p>
+<p>
+© 2026 WAYED MARKETING. All rights reserved.
+</p>
 
-    </div>
+</div>
 
 </footer>
 
