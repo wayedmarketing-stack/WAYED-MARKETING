@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WAYED MARKETING</title>
+
+    <meta name="description"
+          content="WAYED MARKETING - Marketplace Management, Digital Marketing and Website Development">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #111111;
+            line-height: 1.6;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            background: rgba(255,255,255,0.96);
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .navbar {
+            max-width: 1150px;
+            margin: auto;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 21px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .logo img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+        }
+
+        nav a {
+            color: #111111;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #666666;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            background: #f7f7f7;
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 1150px;
+            margin: auto;
+            padding: 80px 25px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            padding: 8px 15px;
+            border: 1px solid #dddddd;
+            border-radius: 30px;
+            background: #ffffff;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            max-width: 900px;
+            font-size: clamp(42px, 7vw, 78px);
+            line-height: 1.05;
+            letter-spacing: -3px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #666666;
+        }
+
+        .hero p {
+            max-width: 680px;
+            color: #555555;
+            font-size: 18px;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        .btn-primary {
+            background: #111111;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #333333;
+        }
+
+        .btn-secondary {
+            background: #ffffff;
+            color: #111111;
+            border: 1px solid #111111;
+        }
+
+        .btn-secondary:hover {
+            background: #111111;
+            color: #ffffff;
+        }
+
+
+        /* ================= COMMON ================= */
+
+        section {
+            padding: 90px 25px;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .section-label {
+            color: #777777;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 5vw, 52px);
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            max-width: 700px;
+            color: #666666;
+            font-size: 16px;
+        }
+
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            background: #ffffff;
+        }
+
+        .about-grid {
+            margin-top: 55px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-text p {
+            color: #555555;
+            margin-bottom: 18px;
+        }
+
+        .about-highlight {
+            background: #f7f7f7;
+            border-left: 4px solid #111111;
+            padding: 30px;
+        }
+
+        .about-highlight h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .about-highlight p {
+            color: #666666;
+        }
+
+
+        /* ================= SERVICES ================= */
+
+        .services {
+            background: #f7f7f7;
+        }
+
+        .service-grid {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            background: #ffffff;
+            padding: 35px;
+            border: 1px solid #e7e7e7;
+            border-radius: 10px;
+            transition: 0.25s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.07);
+        }
+
+        .service-number {
+            color: #888888;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
+
+        .service-card h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #666666;
+        }
+
+
+        /* ================= MARKETPLACE ================= */
+
+        .marketplace {
+            background: #111111;
+            color: #ffffff;
+        }
+
+        .marketplace .section-label {
+            color: #aaaaaa;
+        }
+
+        .marketplace .section-description {
+            color: #bbbbbb;
+        }
+
+        .marketplace-grid {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .market-card {
+            padding: 30px;
+            border: 1px solid #333333;
+            border-radius: 10px;
+        }
+
+        .market-card h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .market-card p {
+            color: #bbbbbb;
+            font-size: 14px;
+        }
+
+
+        /* ================= PROCESS ================= */
+
+        .process-grid {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .process-card {
+            padding: 25px;
+            border-top: 2px solid #111111;
+        }
+
+        .process-card span {
+            color: #888888;
+            font-size: 13px;
+        }
+
+        .process-card h3 {
+            margin: 15px 0 8px;
+        }
+
+        .process-card p {
+            color: #666666;
+            font-size: 14px;
+        }
+
+
+        /* ================= CTA ================= */
+
+        .cta {
+            background: #f7f7f7;
+            text-align: center;
+        }
+
+        .cta .section-description {
+            margin: 0 auto 30px;
+        }
+
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            background: #ffffff;
+        }
+
+        .contact-grid {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .contact-card {
+            padding: 30px;
+            background: #f7f7f7;
+            border-radius: 10px;
+        }
+
+        .contact-card small {
+            display: block;
+            color: #888888;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        .contact-card a {
+            color: #111111;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ================= SOCIAL ICONS ================= */
+
+        .social-card {
+            grid-column: span 2;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            padding: 10px 16px;
+            border: 1px solid #dddddd;
+            border-radius: 7px;
+            background: #ffffff;
+            color: #111111;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        .social-links a:hover {
+            background: #111111;
+            color: #ffffff;
+        }
+
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #cccccc;
+            border-radius: 50%;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #111111;
+            color: #ffffff;
+            padding: 35px 25px;
+        }
+
+        .footer-content {
+            max-width: 1150px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        footer p {
+            color: #aaaaaa;
+            font-size: 13px;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 800px) {
+
+            nav {
+                display: none;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .marketplace-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .social-card {
+                grid-column: span 1;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            section {
+                padding: 65px 20px;
+            }
+
+            .hero-content {
+                padding: 60px 20px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card {
+                padding: 25px;
+            }
+
+            .navbar {
+                padding: 12px 18px;
+            }
+
+            .logo {
+                font-size: 17px;
+            }
+
+            .logo img {
+                width: 38px;
+                height: 38px;
+            }
+
+            .social-links {
+                flex-direction: column;
+            }
+
+            .social-links a {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="navbar">
+
+        <div class="logo">
+
+            <img src="logo.png" alt="WAYED MARKETING Logo">
+
+            <span>WAYED MARKETING</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="#about">About</a>
+
+            <a href="#services">Services</a>
+
+            <a href="#process">Process</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-tag">
+            DIGITAL MARKETING • MARKETPLACE • WEB
+        </div>
+
+
+        <h1>
+
+            Grow your business.
+
+            <span>
+                We handle the digital side.
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            WAYED MARKETING helps businesses build and manage
+            their online presence through marketplace listings,
+            campaign management, digital marketing and website solutions.
+
+        </p>
+
+
+        <div class="buttons">
+
+            <!-- GOOGLE FORM -->
+
+            <a
+                href="https://forms.gle/WwPgEpj5BAmgPo8y9"
+                target="_blank"
+                class="btn btn-primary">
+
+                Tell Us Your Requirement →
+
+            </a>
+
+
+            <a
+                href="#services"
+                class="btn btn-secondary">
+
+                Explore Services
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-label">
+            About Us
+        </div>
+
+
+        <h2 class="section-title">
+            Digital support for growing businesses.
+        </h2>
+
+
+        <p class="section-description">
+
+            We help businesses manage their digital presence
+            with practical and professional solutions.
+
+        </p>
+
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <p>
+
+                    WAYED MARKETING works across marketplace
+                    management, digital marketing and website development.
+
+                </p>
+
+
+                <p>
+
+                    From creating and optimizing product listings
+                    to supporting online campaigns and building
+                    simple business websites, we help businesses
+                    strengthen their digital presence.
+
+                </p>
+
+
+                <p>
+
+                    We focus on understanding each client's requirement
+                    and providing a practical solution for their business.
+
+                </p>
+
+            </div>
+
+
+            <div class="about-highlight">
+
+                <h3>
+                    One place for your digital requirements.
+                </h3>
+
+                <p>
+                    Marketplace • Marketing • Website Development
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-label">
+            What We Do
+        </div>
+
+
+        <h2 class="section-title">
+            Our Services
+        </h2>
+
+
+        <p class="section-description">
+
+            Simple and practical digital services for businesses
+            looking to improve their online presence.
+
+        </p>
+
+
+        <div class="service-grid">
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    01 / MARKETPLACE
+                </div>
+
+                <h3>
+                    Product Listing
+                </h3>
+
+                <p>
+
+                    Product listing support for marketplaces
+                    including Amazon, Flipkart and other
+                    online selling platforms.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    02 / CAMPAIGNS
+                </div>
+
+                <h3>
+                    Campaign Management
+                </h3>
+
+                <p>
+
+                    Support for marketplace campaigns,
+                    promotions and digital activities designed
+                    to improve product visibility.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    03 / DIGITAL
+                </div>
+
+                <h3>
+                    Digital Marketing
+                </h3>
+
+                <p>
+
+                    Digital marketing support to help businesses
+                    establish and strengthen their online presence.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-number">
+                    04 / WEB
+                </div>
+
+                <h3>
+                    Website Development
+                </h3>
+
+                <p>
+
+                    Simple, modern and responsive websites
+                    for businesses, brands and professional requirements.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= MARKETPLACE ================= -->
+
+<section class="marketplace">
+
+    <div class="container">
+
+        <div class="section-label">
+            Marketplace Support
+        </div>
+
+
+        <h2 class="section-title">
+
+            Make your products ready
+            for online selling.
+
+        </h2>
+
+
+        <p class="section-description">
+
+            We support different parts of your marketplace
+            presence, from product information to promotional activities.
+
+        </p>
+
+
+        <div class="marketplace-grid">
+
+
+            <div class="market-card">
+
+                <h3>
+                    Product Listings
+                </h3>
+
+                <p>
+
+                    Product titles, descriptions,
+                    specifications and listing content.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="market-card">
+
+                <h3>
+                    Campaigns
+                </h3>
+
+                <p>
+
+                    Promotional campaigns and marketplace
+                    visibility activities.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="market-card">
+
+                <h3>
+                    Listing Optimization
+                </h3>
+
+                <p>
+
+                    Improve product presentation and make
+                    listings clearer for customers.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PROCESS ================= -->
+
+<section id="process">
+
+    <div class="container">
+
+        <div class="section-label">
+            How We Work
+        </div>
+
+
+        <h2 class="section-title">
+
+            Simple process.
+            Clear communication.
+
+        </h2>
+
+
+        <div class="process-grid">
+
+
+            <div class="process-card">
+
+                <span>01</span>
+
+                <h3>
+                    Requirement
+                </h3>
+
+                <p>
+                    You tell us what your business needs.
+                </p>
+
+            </div>
+
+
+
+            <div class="process-card">
+
+                <span>02</span>
+
+                <h3>
+                    Discussion
+                </h3>
+
+                <p>
+                    We understand the requirement and
+                    discuss the right approach.
+                </p>
+
+            </div>
+
+
+
+            <div class="process-card">
+
+                <span>03</span>
+
+                <h3>
+                    Execution
+                </h3>
+
+                <p>
+                    We work on the agreed digital requirements.
+                </p>
+
+            </div>
+
+
+
+            <div class="process-card">
+
+                <span>04</span>
+
+                <h3>
+                    Delivery
+                </h3>
+
+                <p>
+                    The completed work is reviewed and delivered.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= GOOGLE FORM CTA ================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="section-label">
+            Start a Conversation
+        </div>
+
+
+        <h2 class="section-title">
+            Have a requirement?
+        </h2>
+
+
+        <p class="section-description">
+
+            Tell us about your business and what you need.
+            Submit your requirement through our form and
+            we'll get back to you.
+
+        </p>
+
+
+        <a
+            href="https://forms.gle/WwPgEpj5BAmgPo8y9"
+            target="_blank"
+            class="btn btn-primary">
+
+            Submit Your Requirement →
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-label">
+            Contact
+        </div>
+
+
+        <h2 class="section-title">
+            Let's work together.
+        </h2>
+
+
+        <p class="section-description">
+
+            Reach out to discuss your marketplace,
+            marketing or website requirement.
+
+        </p>
+
+
+        <div class="contact-grid">
+
+
+            <!-- PHONE -->
+
+            <div class="contact-card">
+
+                <small>
+                    Phone
+                </small>
+
+                <a href="tel:+918220507328">
+
+                    +91 82205 07328
+
+                </a>
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div class="contact-card">
+
+                <small>
+                    Email
+                </small>
+
+                <a href="mailto:wayedmarketing@gmail.com">
+
+                    wayedmarketing@gmail.com
+
+                </a>
+
+            </div>
+
+
+
+            <!-- GOOGLE FORM -->
+
+            <div class="contact-card">
+
+                <small>
+                    Client Requirement
+                </small>
+
+                <a
+                    href="https://forms.gle/WwPgEpj5BAmgPo8y9"
+                    target="_blank">
+
+                    Submit Requirement →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- WHATSAPP -->
+
+            <div class="contact-card">
+
+                <small>
+                    WhatsApp
+                </small>
+
+                <a
+                    href="https://wa.me/918300808073"
+                    target="_blank">
+
+                    +91 83008 08073
+
+                </a>
+
+            </div>
+
+
+
+            <!-- SOCIAL MEDIA -->
+
+            <div class="contact-card social-card">
+
+                <small>
+                    Connect With Us
+                </small>
+
+
+                <div class="social-links">
+
+
+                    <!-- WHATSAPP -->
+
+                    <a
+                        href="https://wa.me/918300808073"
+                        target="_blank"
+                        aria-label="WhatsApp">
+
+                        <span class="social-icon">
+                            WA
+                        </span>
+
+                        WhatsApp
+
+                    </a>
+
+
+
+                    <!-- INSTAGRAM -->
+
+                    <a
+                        href="https://www.instagram.com/wayed_marketing"
+                        target="_blank"
+                        aria-label="Instagram">
+
+                        <span class="social-icon">
+                            IG
+                        </span>
+
+                        Instagram
+
+                    </a>
+
+
+
+                    <!-- LINKEDIN -->
+
+                    <a
+                        href="https://www.linkedin.com/company/wayed-marketing/"
+                        target="_blank"
+                        aria-label="LinkedIn">
+
+                        <span class="social-icon">
+                            in
+                        </span>
+
+                        LinkedIn
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <strong>
+            WAYED MARKETING
+        </strong>
+
+
+        <p>
+            © 2026 WAYED MARKETING. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
